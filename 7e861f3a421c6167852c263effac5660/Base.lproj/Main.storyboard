@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,32 +9,171 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Favoriler-->
+        <scene sceneID="7YG-jS-kLc">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="FavouritesViewController" title="Favoriler" id="OUM-8T-LkZ" customClass="FavouritesViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OFm-Ei-Jc0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WG0-1v-F2S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favoriler" id="LQZ-50-Bsf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQb-aa-Mkl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5313.04347826087" y="1309.8214285714284"/>
+        </scene>
+        <!--İstasyonlar-->
+        <scene sceneID="KQh-zv-pWM">
+            <objects>
+                <viewController storyboardIdentifier="StationsViewController" id="CAX-eA-fka" customClass="StationsViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYP-vh-Vf7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zr9-gm-hAL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="İstasyonlar" id="9rz-4D-A06"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQl-Se-zjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5313.04347826087" y="644.86607142857144"/>
+        </scene>
+        <!--Create Ship View Controller-->
+        <scene sceneID="b6B-8R-Kn0">
+            <objects>
+                <viewController storyboardIdentifier="CreateShipViewController" id="a7u-gj-DNu" customClass="CreateShipViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEx-FQ-9z9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai9-NN-vAc">
-                                <rect key="frame" x="186" y="442.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name for spaceship" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYf-Ia-Nzj">
+                                <rect key="frame" x="50" y="30" width="314" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rws-5I-tWp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dzu-Ox-PAE" userLabel="Sliders">
+                                <rect key="frame" x="25" y="105" width="364" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="O4t-eK-tfa" userLabel="DurabilitySlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="338"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qYF-Xd-a0x" userLabel="SpeedSlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="354" width="364" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-qN-cWZ" userLabel="CapacitySlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="420" width="364" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUh-dT-RaW" userLabel="SpacerView">
+                                        <rect key="frame" x="0.0" y="486" width="364" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="njE-W9-RMu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Og-mD6" customClass="PrimaryButton" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                <rect key="frame" x="50" y="666" width="314" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4lr-Bb-vES"/>
+                                </constraints>
+                                <state key="normal" title="Devam Et">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="pg3-HA-Bse"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ai9-NN-vAc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cja-go-qtm"/>
-                            <constraint firstItem="Ai9-NN-vAc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kE5-ej-L55"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="FYf-Ia-Nzj" secondAttribute="trailing" constant="50" id="BDJ-t9-tn0"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="50c-Og-mD6" secondAttribute="trailing" constant="50" id="E7i-tx-dMq"/>
+                            <constraint firstItem="50c-Og-mD6" firstAttribute="top" secondItem="Dzu-Ox-PAE" secondAttribute="bottom" constant="25" id="TLp-AM-GJS"/>
+                            <constraint firstItem="FYf-Ia-Nzj" firstAttribute="top" secondItem="pg3-HA-Bse" secondAttribute="top" constant="30" id="WvD-mw-xXJ"/>
+                            <constraint firstItem="50c-Og-mD6" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" constant="50" id="Z6p-ud-RGX"/>
+                            <constraint firstItem="FYf-Ia-Nzj" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" constant="50" id="avc-Rj-FCF"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="bottom" secondItem="50c-Og-mD6" secondAttribute="bottom" constant="25" id="i9y-aQ-Og7"/>
+                            <constraint firstItem="Dzu-Ox-PAE" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" constant="25" id="k7U-mX-EF2"/>
+                            <constraint firstItem="Dzu-Ox-PAE" firstAttribute="top" secondItem="FYf-Ia-Nzj" secondAttribute="bottom" constant="25" id="nrp-cM-hkV"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Dzu-Ox-PAE" secondAttribute="bottom" constant="20" id="rMQ-Jw-JjS"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="Dzu-Ox-PAE" secondAttribute="trailing" constant="25" id="ujg-qt-I3W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="capacitySliderView" destination="Sjy-qN-cWZ" id="XJ0-vn-Ttf"/>
+                        <outlet property="durabilitySliderView" destination="O4t-eK-tfa" id="VK8-Ba-x1B"/>
+                        <outlet property="speedSliderView" destination="qYF-Xd-a0x" id="9rc-BH-u58"/>
+                        <outlet property="textField" destination="FYf-Ia-Nzj" id="g00-sf-81p"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDE-FX-mdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="2567" y="954"/>
+        </scene>
+        <!--Home Tab Bar Controller-->
+        <scene sceneID="iRA-dh-uc0">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="aFM-wb-opL" customClass="HomeTabBarController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sTH-Sr-1fx"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oqr-Fc-e6t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CEJ-ph-iho" kind="relationship" relationship="viewControllers" id="zl2-QT-wds"/>
+                        <segue destination="zms-kd-WD0" kind="relationship" relationship="viewControllers" id="t4B-Vz-Rmn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cox-aF-Cds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3384" y="954"/>
+        </scene>
+        <!--İstasyonlar-->
+        <scene sceneID="Mo8-NS-ZlX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CEJ-ph-iho" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="İstasyonlar" id="NoE-1T-i9q"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Itp-i5-qFa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CAX-eA-fka" kind="relationship" relationship="rootViewController" id="UCj-uE-Yst"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFi-Ac-2fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4402.898550724638" y="644.86607142857144"/>
+        </scene>
+        <!--Favoriler-->
+        <scene sceneID="7qX-SV-i9c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zms-kd-WD0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoriler" id="oap-HU-eph"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pdq-sx-foB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OUM-8T-LkZ" kind="relationship" relationship="rootViewController" id="fhE-Ed-DBK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ij1-p8-BlS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4402.898550724638" y="1309.8214285714284"/>
         </scene>
     </scenes>
     <resources>
