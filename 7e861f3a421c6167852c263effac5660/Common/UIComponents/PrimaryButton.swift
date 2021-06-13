@@ -24,9 +24,4 @@ class PrimaryButton: UIButton {
         backgroundColor = ColorCompatibility.label
         setTitleColor(ColorCompatibility.systemBackground, for: .normal)
     }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        backgroundColor = ColorCompatibility.label
-        setTitleColor(ColorCompatibility.systemBackground, for: .normal)
-    }
 }

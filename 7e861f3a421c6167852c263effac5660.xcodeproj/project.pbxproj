@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0E1BEB267618E900850A57 /* StationsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E1BEA267618E900850A57 /* StationsTitleView.swift */; };
+		DC0E1BEF267618F200850A57 /* StationsTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0E1BEE267618F200850A57 /* StationsTitleView.xib */; };
 		DC12911526755E26007CB73F /* CreateShipSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12911426755E26007CB73F /* CreateShipSliderView.swift */; };
 		DC12911826755E45007CB73F /* CreateShipSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC12911726755E45007CB73F /* CreateShipSliderView.xib */; };
 		DC12911B26756988007CB73F /* ColorCompatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12911A26756988007CB73F /* ColorCompatability.swift */; };
@@ -15,6 +17,14 @@
 		DC25C8EB26760FC1008767F2 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8EA26760FC1008767F2 /* UIViewController+Alert.swift */; };
 		DC25C8EE26761226008767F2 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8ED26761226008767F2 /* UIView+TapGesture.swift */; };
 		DC25C8F126761275008767F2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8F026761275008767F2 /* BaseViewController.swift */; };
+		DC707AFC267654A100C1AF8B /* StationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC707AFA267654A100C1AF8B /* StationCollectionViewCell.swift */; };
+		DC707AFD267654A100C1AF8B /* StationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC707AFB267654A100C1AF8B /* StationCollectionViewCell.xib */; };
+		DC707B012676653700C1AF8B /* StationsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC707B002676653700C1AF8B /* StationsHeaderView.swift */; };
+		DC707B052676654300C1AF8B /* StationsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC707B042676654300C1AF8B /* StationsHeaderView.xib */; };
+		DC707B09267665D900C1AF8B /* StationsFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC707B08267665D900C1AF8B /* StationsFooterView.xib */; };
+		DC707B0C267665E800C1AF8B /* StationsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC707B0B267665E800C1AF8B /* StationsFooterView.swift */; };
+		DC707B10267666A300C1AF8B /* StationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC707B0E267666A300C1AF8B /* StationsTableViewCell.swift */; };
+		DC707B11267666A300C1AF8B /* StationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC707B0F267666A300C1AF8B /* StationsTableViewCell.xib */; };
 		DC875C2B267575A3001C1FC5 /* CreateShipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875C2A267575A3001C1FC5 /* CreateShipViewModel.swift */; };
 		DC98E600267522A6005F116F /* CreateShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E5FF267522A6005F116F /* CreateShipViewController.swift */; };
 		DC98E6042675282F005F116F /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E6032675282F005F116F /* HomeTabBarController.swift */; };
@@ -30,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0E1BEA267618E900850A57 /* StationsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTitleView.swift; sourceTree = "<group>"; };
+		DC0E1BEE267618F200850A57 /* StationsTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationsTitleView.xib; sourceTree = "<group>"; };
 		DC12911426755E26007CB73F /* CreateShipSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipSliderView.swift; sourceTree = "<group>"; };
 		DC12911726755E45007CB73F /* CreateShipSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateShipSliderView.xib; sourceTree = "<group>"; };
 		DC12911A26756988007CB73F /* ColorCompatability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCompatability.swift; sourceTree = "<group>"; };
@@ -38,6 +50,14 @@
 		DC25C8EA26760FC1008767F2 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		DC25C8ED26761226008767F2 /* UIView+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
 		DC25C8F026761275008767F2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DC707AFA267654A100C1AF8B /* StationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCollectionViewCell.swift; sourceTree = "<group>"; };
+		DC707AFB267654A100C1AF8B /* StationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCollectionViewCell.xib; sourceTree = "<group>"; };
+		DC707B002676653700C1AF8B /* StationsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsHeaderView.swift; sourceTree = "<group>"; };
+		DC707B042676654300C1AF8B /* StationsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationsHeaderView.xib; sourceTree = "<group>"; };
+		DC707B08267665D900C1AF8B /* StationsFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationsFooterView.xib; sourceTree = "<group>"; };
+		DC707B0B267665E800C1AF8B /* StationsFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsFooterView.swift; sourceTree = "<group>"; };
+		DC707B0E267666A300C1AF8B /* StationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewCell.swift; sourceTree = "<group>"; };
+		DC707B0F267666A300C1AF8B /* StationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationsTableViewCell.xib; sourceTree = "<group>"; };
 		DC875C2A267575A3001C1FC5 /* CreateShipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipViewModel.swift; sourceTree = "<group>"; };
 		DC98E5FF267522A6005F116F /* CreateShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipViewController.swift; sourceTree = "<group>"; };
 		DC98E6032675282F005F116F /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -65,6 +85,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC0E1BE8267618C900850A57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC707B07267665CC00C1AF8B /* Footer */,
+				DC707AFF2676651600C1AF8B /* Header */,
+				DC707AF926762A8C00C1AF8B /* Cell */,
+				DC0E1BE9267618DA00850A57 /* Title */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC0E1BE9267618DA00850A57 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E1BEA267618E900850A57 /* StationsTitleView.swift */,
+				DC0E1BEE267618F200850A57 /* StationsTitleView.xib */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		DC0E1BF126761AAF00850A57 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC98E6082675286F005F116F /* StationsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DC12911226755DFC007CB73F /* Title */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +147,35 @@
 				DC875C2A267575A3001C1FC5 /* CreateShipViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC707AF926762A8C00C1AF8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC707AFA267654A100C1AF8B /* StationCollectionViewCell.swift */,
+				DC707AFB267654A100C1AF8B /* StationCollectionViewCell.xib */,
+				DC707B0E267666A300C1AF8B /* StationsTableViewCell.swift */,
+				DC707B0F267666A300C1AF8B /* StationsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DC707AFF2676651600C1AF8B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				DC707B002676653700C1AF8B /* StationsHeaderView.swift */,
+				DC707B042676654300C1AF8B /* StationsHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		DC707B07267665CC00C1AF8B /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				DC707B08267665D900C1AF8B /* StationsFooterView.xib */,
+				DC707B0B267665E800C1AF8B /* StationsFooterView.swift */,
+			);
+			path = Footer;
 			sourceTree = "<group>";
 		};
 		DC98E5FB2675225E005F116F /* Application */ = {
@@ -141,7 +218,8 @@
 		DC98E60626752835005F116F /* Stations */ = {
 			isa = PBXGroup;
 			children = (
-				DC98E6082675286F005F116F /* StationsViewController.swift */,
+				DC0E1BF126761AAF00850A57 /* Controller */,
+				DC0E1BE8267618C900850A57 /* View */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -278,11 +356,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC707B11267666A300C1AF8B /* StationsTableViewCell.xib in Resources */,
+				DC707B052676654300C1AF8B /* StationsHeaderView.xib in Resources */,
+				DC0E1BEF267618F200850A57 /* StationsTitleView.xib in Resources */,
+				DC707B09267665D900C1AF8B /* StationsFooterView.xib in Resources */,
 				DCB8DFA82675140A00571AA7 /* LaunchScreen.storyboard in Resources */,
 				DC12911826755E45007CB73F /* CreateShipSliderView.xib in Resources */,
 				DC98E61F26755441005F116F /* CreateShipTitleView.xib in Resources */,
 				DCB8DFA52675140A00571AA7 /* Assets.xcassets in Resources */,
 				DCB8DFA32675140900571AA7 /* Main.storyboard in Resources */,
+				DC707AFD267654A100C1AF8B /* StationCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,9 +378,13 @@
 			files = (
 				DC98E6182675523C005F116F /* BaseXib.swift in Sources */,
 				DC12911F26756A9D007CB73F /* PrimaryButton.swift in Sources */,
+				DC707B10267666A300C1AF8B /* StationsTableViewCell.swift in Sources */,
 				DC12911526755E26007CB73F /* CreateShipSliderView.swift in Sources */,
 				DC25C8EB26760FC1008767F2 /* UIViewController+Alert.swift in Sources */,
+				DC707AFC267654A100C1AF8B /* StationCollectionViewCell.swift in Sources */,
+				DC0E1BEB267618E900850A57 /* StationsTitleView.swift in Sources */,
 				DC98E600267522A6005F116F /* CreateShipViewController.swift in Sources */,
+				DC707B0C267665E800C1AF8B /* StationsFooterView.swift in Sources */,
 				DC25C8F126761275008767F2 /* BaseViewController.swift in Sources */,
 				DCB8DF9C2675140900571AA7 /* AppDelegate.swift in Sources */,
 				DC98E6042675282F005F116F /* HomeTabBarController.swift in Sources */,
@@ -305,6 +392,7 @@
 				DC25C8EE26761226008767F2 /* UIView+TapGesture.swift in Sources */,
 				DC875C2B267575A3001C1FC5 /* CreateShipViewModel.swift in Sources */,
 				DC98E6092675286F005F116F /* StationsViewController.swift in Sources */,
+				DC707B012676653700C1AF8B /* StationsHeaderView.swift in Sources */,
 				DC25C8E826760169008767F2 /* CreateShipTitleView.swift in Sources */,
 				DC12911B26756988007CB73F /* ColorCompatability.swift in Sources */,
 				DC98E61C267553BB005F116F /* UIView+Constraints.swift in Sources */,

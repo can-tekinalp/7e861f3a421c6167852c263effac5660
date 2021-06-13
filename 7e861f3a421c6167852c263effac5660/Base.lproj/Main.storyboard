@@ -25,17 +25,37 @@
             </objects>
             <point key="canvasLocation" x="5313.04347826087" y="1309.8214285714284"/>
         </scene>
-        <!--İstasyonlar-->
+        <!--Stations View Controller-->
         <scene sceneID="KQh-zv-pWM">
             <objects>
                 <viewController storyboardIdentifier="StationsViewController" id="CAX-eA-fka" customClass="StationsViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYP-vh-Vf7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-cf-AAK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CAX-eA-fka" id="9sn-Cv-b7d"/>
+                                    <outlet property="delegate" destination="CAX-eA-fka" id="ln1-LC-zI2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Zr9-gm-hAL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UcC-cf-AAK" firstAttribute="top" secondItem="Zr9-gm-hAL" secondAttribute="top" id="6uh-02-Ez3"/>
+                            <constraint firstItem="Zr9-gm-hAL" firstAttribute="bottom" secondItem="UcC-cf-AAK" secondAttribute="bottom" id="8Aq-Qj-ey1"/>
+                            <constraint firstItem="UcC-cf-AAK" firstAttribute="leading" secondItem="Zr9-gm-hAL" secondAttribute="leading" id="dlx-jh-iPg"/>
+                            <constraint firstItem="Zr9-gm-hAL" firstAttribute="trailing" secondItem="UcC-cf-AAK" secondAttribute="trailing" id="ngC-ha-cFl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="İstasyonlar" id="9rz-4D-A06"/>
+                    <navigationItem key="navigationItem" id="9rz-4D-A06"/>
+                    <connections>
+                        <outlet property="tableView" destination="UcC-cf-AAK" id="WVE-hk-lOx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQl-Se-zjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,6 +217,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
