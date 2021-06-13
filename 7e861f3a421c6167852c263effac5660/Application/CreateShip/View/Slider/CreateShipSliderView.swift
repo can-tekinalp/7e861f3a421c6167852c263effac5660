@@ -10,15 +10,13 @@ import UIKit
 final class CreateShipSliderView: BaseXib {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
     
-    var title: String? {
-        get { titleLabel.text }
-        set { titleLabel.text = newValue }
-    }
-    
-    var sliderValue: Int {
-        return Int(roundf(slider.value))
+    var viewModel: CreateShipSliderViewModel? {
+        didSet {
+            titleLabel.text = viewModel?.title
+        }
     }
     
     override func initialConfiguration() {
@@ -26,7 +24,11 @@ final class CreateShipSliderView: BaseXib {
     }
     
     @objc private func sliderValueChanged(_ sender: UISlider) {
-        let rounded = roundf(sender.value)
-        sender.setValue(rounded, animated: false)
+        guard let viewModel = viewModel else { return }
+        let newValue = Int(roundf(sender.value))
+        let nextValue = newValue <= viewModel.maxValue ? Float(newValue) : Float(viewModel.currentPoint)
+        sender.setValue(nextValue, animated: false)
+        viewModel.currentPoint = Int(nextValue)
+        pointsLabel.text = String(viewModel.currentPoint)
     }
 }

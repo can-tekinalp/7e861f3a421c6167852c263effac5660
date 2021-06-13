@@ -11,11 +11,12 @@
 		DC12911826755E45007CB73F /* CreateShipSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC12911726755E45007CB73F /* CreateShipSliderView.xib */; };
 		DC12911B26756988007CB73F /* ColorCompatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12911A26756988007CB73F /* ColorCompatability.swift */; };
 		DC12911F26756A9D007CB73F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12911E26756A9D007CB73F /* PrimaryButton.swift */; };
+		DC25C8E826760169008767F2 /* CreateShipTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8E726760169008767F2 /* CreateShipTitleView.swift */; };
+		DC875C2B267575A3001C1FC5 /* CreateShipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC875C2A267575A3001C1FC5 /* CreateShipViewModel.swift */; };
 		DC98E600267522A6005F116F /* CreateShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E5FF267522A6005F116F /* CreateShipViewController.swift */; };
 		DC98E6042675282F005F116F /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E6032675282F005F116F /* HomeTabBarController.swift */; };
 		DC98E6092675286F005F116F /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E6082675286F005F116F /* StationsViewController.swift */; };
 		DC98E60D267528C2005F116F /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E60C267528C2005F116F /* FavouritesViewController.swift */; };
-		DC98E61226755178005F116F /* CreateShipTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E61126755178005F116F /* CreateShipTitleView.swift */; };
 		DC98E6182675523C005F116F /* BaseXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E6172675523C005F116F /* BaseXib.swift */; };
 		DC98E61C267553BB005F116F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E61B267553BB005F116F /* UIView+Constraints.swift */; };
 		DC98E61F26755441005F116F /* CreateShipTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC98E61E26755441005F116F /* CreateShipTitleView.xib */; };
@@ -30,11 +31,12 @@
 		DC12911726755E45007CB73F /* CreateShipSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateShipSliderView.xib; sourceTree = "<group>"; };
 		DC12911A26756988007CB73F /* ColorCompatability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCompatability.swift; sourceTree = "<group>"; };
 		DC12911E26756A9D007CB73F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		DC25C8E726760169008767F2 /* CreateShipTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipTitleView.swift; sourceTree = "<group>"; };
+		DC875C2A267575A3001C1FC5 /* CreateShipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipViewModel.swift; sourceTree = "<group>"; };
 		DC98E5FF267522A6005F116F /* CreateShipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipViewController.swift; sourceTree = "<group>"; };
 		DC98E6032675282F005F116F /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		DC98E6082675286F005F116F /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
 		DC98E60C267528C2005F116F /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
-		DC98E61126755178005F116F /* CreateShipTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipTitleView.swift; sourceTree = "<group>"; };
 		DC98E6172675523C005F116F /* BaseXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXib.swift; sourceTree = "<group>"; };
 		DC98E61B267553BB005F116F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		DC98E61E26755441005F116F /* CreateShipTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateShipTitleView.xib; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		DC12911226755DFC007CB73F /* Title */ = {
 			isa = PBXGroup;
 			children = (
-				DC98E61126755178005F116F /* CreateShipTitleView.swift */,
 				DC98E61E26755441005F116F /* CreateShipTitleView.xib */,
+				DC25C8E726760169008767F2 /* CreateShipTitleView.swift */,
 			);
 			path = Title;
 			sourceTree = "<group>";
@@ -87,6 +89,7 @@
 		DC12912126756C08007CB73F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC875C2A267575A3001C1FC5 /* CreateShipViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,9 +290,10 @@
 				DC98E600267522A6005F116F /* CreateShipViewController.swift in Sources */,
 				DCB8DF9C2675140900571AA7 /* AppDelegate.swift in Sources */,
 				DC98E6042675282F005F116F /* HomeTabBarController.swift in Sources */,
-				DC98E61226755178005F116F /* CreateShipTitleView.swift in Sources */,
 				DC98E60D267528C2005F116F /* FavouritesViewController.swift in Sources */,
+				DC875C2B267575A3001C1FC5 /* CreateShipViewModel.swift in Sources */,
 				DC98E6092675286F005F116F /* StationsViewController.swift in Sources */,
+				DC25C8E826760169008767F2 /* CreateShipTitleView.swift in Sources */,
 				DC12911B26756988007CB73F /* ColorCompatability.swift in Sources */,
 				DC98E61C267553BB005F116F /* UIView+Constraints.swift in Sources */,
 			);

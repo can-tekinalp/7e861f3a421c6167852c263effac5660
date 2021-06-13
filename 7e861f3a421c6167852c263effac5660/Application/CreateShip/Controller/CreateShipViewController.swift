@@ -9,11 +9,13 @@ import UIKit
 
 final class CreateShipViewController: UIViewController {
     
-    private let titleView = CreateShipTitleView(frame: .zero)
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var durabilitySliderView: CreateShipSliderView!
     @IBOutlet weak var speedSliderView: CreateShipSliderView!
     @IBOutlet weak var capacitySliderView: CreateShipSliderView!
+    
+    private let titleView = CreateShipTitleView(frame: .zero)
+    private let createShipViewModel = CreateShipViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,16 @@ final class CreateShipViewController: UIViewController {
     
     private func setupUI() {
         navigationItem.titleView = titleView
-        durabilitySliderView.title = "Dayanıklılık"
-        speedSliderView.title = "Hız"
-        capacitySliderView.title = "Kapasite"
+        setViewModels()
+    }
+    
+    private func setViewModels() {
+        durabilitySliderView.viewModel = createShipViewModel.durabilitySliderViewModel
+        speedSliderView.viewModel = createShipViewModel.speedSliderViewModel
+        capacitySliderView.viewModel = createShipViewModel.capacitySliderViewModel
+        
+        createShipViewModel.availablePointsChanged = { [weak self] points in
+            self?.titleView.pointsLabel.text = points
+        }
     }
 }
