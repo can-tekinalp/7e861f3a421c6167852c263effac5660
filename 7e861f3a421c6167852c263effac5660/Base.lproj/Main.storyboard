@@ -49,62 +49,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name for spaceship" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYf-Ia-Nzj">
-                                <rect key="frame" x="50" y="30" width="314" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="rws-5I-tWp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dzu-Ox-PAE" userLabel="Sliders">
-                                <rect key="frame" x="25" y="105" width="364" height="536"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeI-me-K4e">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="O4t-eK-tfa" userLabel="DurabilitySlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="338"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qYF-Xd-a0x" userLabel="SpeedSlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="354" width="364" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-qN-cWZ" userLabel="CapacitySlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="420" width="364" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUh-dT-RaW" userLabel="SpacerView">
-                                        <rect key="frame" x="0.0" y="486" width="364" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3f-IM-FV3" userLabel="Content">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="369"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UuM-Yt-GFV">
+                                                <rect key="frame" x="20" y="30" width="374" height="309"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Uzay gemisinin ismini giriniz" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FYf-Ia-Nzj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="rws-5I-tWp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dzu-Ox-PAE" userLabel="Sliders">
+                                                        <rect key="frame" x="0.0" y="66" width="374" height="182"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="O4t-eK-tfa" userLabel="DurabilitySlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="qYF-Xd-a0x" userLabel="SpeedSlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="66" width="374" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-qN-cWZ" userLabel="CapacitySlider" customClass="CreateShipSliderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="132" width="374" height="50"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Og-mD6" customClass="PrimaryButton" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="264" width="374" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="4lr-Bb-vES"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Devam Et">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="continueButtonTapped:" destination="a7u-gj-DNu" eventType="touchUpInside" id="OF7-0g-3JE"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="njE-W9-RMu"/>
+                                            <constraint firstAttribute="trailing" secondItem="UuM-Yt-GFV" secondAttribute="trailing" constant="20" id="BfL-Ea-cWc"/>
+                                            <constraint firstAttribute="bottom" secondItem="UuM-Yt-GFV" secondAttribute="bottom" constant="30" id="FW0-gs-xpR"/>
+                                            <constraint firstItem="UuM-Yt-GFV" firstAttribute="leading" secondItem="U3f-IM-FV3" secondAttribute="leading" constant="20" id="mJd-1W-dQa"/>
+                                            <constraint firstItem="UuM-Yt-GFV" firstAttribute="top" secondItem="U3f-IM-FV3" secondAttribute="top" constant="30" id="vFn-Ef-YSw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50c-Og-mD6" customClass="PrimaryButton" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
-                                <rect key="frame" x="50" y="666" width="314" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4lr-Bb-vES"/>
+                                    <constraint firstAttribute="width" secondItem="U3f-IM-FV3" secondAttribute="width" id="D13-m7-jif"/>
+                                    <constraint firstAttribute="leading" secondItem="U3f-IM-FV3" secondAttribute="leading" id="Q3Y-DN-2Mf"/>
+                                    <constraint firstItem="U3f-IM-FV3" firstAttribute="bottom" secondItem="TeI-me-K4e" secondAttribute="bottom" id="VqW-Hb-u8H"/>
+                                    <constraint firstItem="U3f-IM-FV3" firstAttribute="trailing" secondItem="TeI-me-K4e" secondAttribute="trailing" id="enn-ty-zms"/>
+                                    <constraint firstItem="U3f-IM-FV3" firstAttribute="top" secondItem="TeI-me-K4e" secondAttribute="top" id="jqO-Vp-sb2"/>
                                 </constraints>
-                                <state key="normal" title="Devam Et">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pg3-HA-Bse"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="FYf-Ia-Nzj" secondAttribute="trailing" constant="50" id="BDJ-t9-tn0"/>
-                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="50c-Og-mD6" secondAttribute="trailing" constant="50" id="E7i-tx-dMq"/>
-                            <constraint firstItem="50c-Og-mD6" firstAttribute="top" secondItem="Dzu-Ox-PAE" secondAttribute="bottom" constant="25" id="TLp-AM-GJS"/>
-                            <constraint firstItem="FYf-Ia-Nzj" firstAttribute="top" secondItem="pg3-HA-Bse" secondAttribute="top" constant="30" id="WvD-mw-xXJ"/>
-                            <constraint firstItem="50c-Og-mD6" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" constant="50" id="Z6p-ud-RGX"/>
-                            <constraint firstItem="FYf-Ia-Nzj" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" constant="50" id="avc-Rj-FCF"/>
-                            <constraint firstItem="pg3-HA-Bse" firstAttribute="bottom" secondItem="50c-Og-mD6" secondAttribute="bottom" constant="25" id="i9y-aQ-Og7"/>
-                            <constraint firstItem="Dzu-Ox-PAE" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" constant="25" id="k7U-mX-EF2"/>
-                            <constraint firstItem="Dzu-Ox-PAE" firstAttribute="top" secondItem="FYf-Ia-Nzj" secondAttribute="bottom" constant="25" id="nrp-cM-hkV"/>
-                            <constraint firstItem="pg3-HA-Bse" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Dzu-Ox-PAE" secondAttribute="bottom" constant="20" id="rMQ-Jw-JjS"/>
-                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="Dzu-Ox-PAE" secondAttribute="trailing" constant="25" id="ujg-qt-I3W"/>
+                            <constraint firstItem="TeI-me-K4e" firstAttribute="leading" secondItem="pg3-HA-Bse" secondAttribute="leading" id="2QU-87-y1j"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="trailing" secondItem="TeI-me-K4e" secondAttribute="trailing" id="Leo-MD-Ers"/>
+                            <constraint firstItem="pg3-HA-Bse" firstAttribute="bottom" secondItem="TeI-me-K4e" secondAttribute="bottom" id="VcF-Yc-a6Z"/>
+                            <constraint firstItem="TeI-me-K4e" firstAttribute="top" secondItem="pg3-HA-Bse" secondAttribute="top" id="zfg-hk-GsM"/>
                         </constraints>
                     </view>
                     <connections>

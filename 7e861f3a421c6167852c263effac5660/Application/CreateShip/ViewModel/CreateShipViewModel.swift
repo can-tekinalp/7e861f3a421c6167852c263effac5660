@@ -30,6 +30,9 @@ final class CreateShipViewModel {
     lazy var capacitySliderViewModel = CreateShipSliderViewModel(title: "Kapasite", availablePoint: totalPoint)
     
     var availablePointsChanged: (String) -> Void = { _ in }
+    var didSpendAllPoints: Bool {
+        return availablePoint == 0
+    }
     
     init() {
         sliderViewModels.forEach {

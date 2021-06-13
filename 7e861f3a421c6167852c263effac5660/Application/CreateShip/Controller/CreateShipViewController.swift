@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CreateShipViewController: UIViewController {
+final class CreateShipViewController: BaseViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var durabilitySliderView: CreateShipSliderView!
@@ -24,6 +24,7 @@ final class CreateShipViewController: UIViewController {
     
     private func setupUI() {
         navigationItem.titleView = titleView
+        textField.autocorrectionType = .no
         setViewModels()
     }
     
@@ -35,5 +36,19 @@ final class CreateShipViewController: UIViewController {
         createShipViewModel.availablePointsChanged = { [weak self] points in
             self?.titleView.pointsLabel.text = points
         }
+    }
+    
+    @IBAction func continueButtonTapped(_ sender: Any) {
+        let textCount = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
+        guard textCount > 0 else {
+            showOkAlert(title: "Uyarı", message: "Lütfen isim giriniz.")
+            return
+        }
+        
+        guard createShipViewModel.didSpendAllPoints else {
+            showOkAlert(title: "Uyarı", message: "Lütfen tüm puanları harcayın.")
+            return
+        }
+        
     }
 }
