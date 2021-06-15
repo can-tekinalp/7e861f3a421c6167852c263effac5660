@@ -14,12 +14,31 @@
             <objects>
                 <viewController storyboardIdentifier="FavouritesViewController" title="Favoriler" id="OUM-8T-LkZ" customClass="FavouritesViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFm-Ei-Jc0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-JG-P8h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OUM-8T-LkZ" id="sph-Zk-xMV"/>
+                                    <outlet property="delegate" destination="OUM-8T-LkZ" id="oLr-m0-rkV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WG0-1v-F2S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S1F-JG-P8h" firstAttribute="top" secondItem="WG0-1v-F2S" secondAttribute="top" id="ClS-Su-VOb"/>
+                            <constraint firstItem="WG0-1v-F2S" firstAttribute="trailing" secondItem="S1F-JG-P8h" secondAttribute="trailing" id="ZPt-uv-Y4n"/>
+                            <constraint firstItem="S1F-JG-P8h" firstAttribute="leading" secondItem="WG0-1v-F2S" secondAttribute="leading" id="blV-aN-Paz"/>
+                            <constraint firstItem="WG0-1v-F2S" firstAttribute="bottom" secondItem="S1F-JG-P8h" secondAttribute="bottom" id="xTs-qg-34s"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favoriler" id="LQZ-50-Bsf"/>
+                    <connections>
+                        <outlet property="tableView" destination="S1F-JG-P8h" id="Dv7-13-KfE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQb-aa-Mkl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,10 +49,10 @@
             <objects>
                 <viewController storyboardIdentifier="StationsViewController" id="CAX-eA-fka" customClass="StationsViewController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYP-vh-Vf7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-cf-AAK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-cf-AAK">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <sections/>
@@ -161,7 +180,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="HomeTabBarController" id="aFM-wb-opL" customClass="HomeTabBarController" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sTH-Sr-1fx"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oqr-Fc-e6t">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oqr-Fc-e6t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,7 +198,10 @@
         <scene sceneID="Mo8-NS-ZlX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CEJ-ph-iho" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="İstasyonlar" id="NoE-1T-i9q"/>
+                    <tabBarItem key="tabBarItem" title="İstasyonlar" image="tabStationsIcon" id="NoE-1T-i9q">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Itp-i5-qFa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -198,7 +220,10 @@
         <scene sceneID="7qX-SV-i9c">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zms-kd-WD0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favoriler" id="oap-HU-eph"/>
+                    <tabBarItem key="tabBarItem" title="Favoriler" image="tabFavouriteIcon" id="oap-HU-eph">
+                        <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-2"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pdq-sx-foB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -215,6 +240,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="tabFavouriteIcon" width="45" height="45"/>
+        <image name="tabStationsIcon" width="45" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

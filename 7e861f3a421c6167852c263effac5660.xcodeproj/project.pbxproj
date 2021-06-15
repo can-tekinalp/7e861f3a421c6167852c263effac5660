@@ -33,6 +33,9 @@
 		DC98E6182675523C005F116F /* BaseXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E6172675523C005F116F /* BaseXib.swift */; };
 		DC98E61C267553BB005F116F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98E61B267553BB005F116F /* UIView+Constraints.swift */; };
 		DC98E61F26755441005F116F /* CreateShipTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC98E61E26755441005F116F /* CreateShipTitleView.xib */; };
+		DCB62DAB26775F8900708267 /* GetStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB62DAA26775F8900708267 /* GetStationsService.swift */; };
+		DCB62DAF2677661900708267 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB62DAE2677661900708267 /* ActivityIndicatorManager.swift */; };
+		DCB62DB32677671300708267 /* UIWindow+First.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB62DB22677671300708267 /* UIWindow+First.swift */; };
 		DCB8DF9C2675140900571AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8DF9B2675140900571AA7 /* AppDelegate.swift */; };
 		DCB8DFA32675140900571AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB8DFA12675140900571AA7 /* Main.storyboard */; };
 		DCB8DFA52675140A00571AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB8DFA42675140A00571AA7 /* Assets.xcassets */; };
@@ -66,6 +69,9 @@
 		DC98E6172675523C005F116F /* BaseXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXib.swift; sourceTree = "<group>"; };
 		DC98E61B267553BB005F116F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		DC98E61E26755441005F116F /* CreateShipTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateShipTitleView.xib; sourceTree = "<group>"; };
+		DCB62DAA26775F8900708267 /* GetStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStationsService.swift; sourceTree = "<group>"; };
+		DCB62DAE2677661900708267 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		DCB62DB22677671300708267 /* UIWindow+First.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+First.swift"; sourceTree = "<group>"; };
 		DCB8DF982675140800571AA7 /* 7e861f3a421c6167852c263effac5660.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 7e861f3a421c6167852c263effac5660.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB8DF9B2675140900571AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCB8DFA22675140900571AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 		DC98E61526755209005F116F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DCB62DAD267765AF00708267 /* Manager */,
+				DCB62DA926775F7300708267 /* Service */,
 				DC12911D26756A8E007CB73F /* UIComponents */,
 				DC98E61A267552CD005F116F /* Extensions */,
 				DC12911A26756988007CB73F /* ColorCompatability.swift */,
@@ -265,8 +273,25 @@
 				DC98E61B267553BB005F116F /* UIView+Constraints.swift */,
 				DC25C8EA26760FC1008767F2 /* UIViewController+Alert.swift */,
 				DC25C8ED26761226008767F2 /* UIView+TapGesture.swift */,
+				DCB62DB22677671300708267 /* UIWindow+First.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DCB62DA926775F7300708267 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCB62DAA26775F8900708267 /* GetStationsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCB62DAD267765AF00708267 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DCB62DAE2677661900708267 /* ActivityIndicatorManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		DCB8DF8F2675140800571AA7 = {
@@ -388,9 +413,12 @@
 				DC25C8F126761275008767F2 /* BaseViewController.swift in Sources */,
 				DCB8DF9C2675140900571AA7 /* AppDelegate.swift in Sources */,
 				DC98E6042675282F005F116F /* HomeTabBarController.swift in Sources */,
+				DCB62DB32677671300708267 /* UIWindow+First.swift in Sources */,
 				DC98E60D267528C2005F116F /* FavouritesViewController.swift in Sources */,
 				DC25C8EE26761226008767F2 /* UIView+TapGesture.swift in Sources */,
+				DCB62DAF2677661900708267 /* ActivityIndicatorManager.swift in Sources */,
 				DC875C2B267575A3001C1FC5 /* CreateShipViewModel.swift in Sources */,
+				DCB62DAB26775F8900708267 /* GetStationsService.swift in Sources */,
 				DC98E6092675286F005F116F /* StationsViewController.swift in Sources */,
 				DC707B012676653700C1AF8B /* StationsHeaderView.swift in Sources */,
 				DC25C8E826760169008767F2 /* CreateShipTitleView.swift in Sources */,

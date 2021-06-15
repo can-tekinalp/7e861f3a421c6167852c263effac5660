@@ -50,5 +50,15 @@ final class CreateShipViewController: BaseViewController {
             return
         }
         
+        ActivityIndicatorManager.shared.show()
+        GetStationsService.fetchStations { (result) in
+            ActivityIndicatorManager.shared.hide()
+            switch result {
+            case .success(let stations):
+                debugPrint(stations)
+            case .failure(let error):
+                break
+            }
+        }
     }
 }

@@ -9,9 +9,18 @@ import UIKit
 
 final class StationsTableViewCell: UITableViewCell {
 
+    enum CellType { case stations, favourites }
+    
     static let reuseId = "StationsTableViewCell"
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var travelButton: PrimaryButton!
+    
+    var cellType: CellType = .stations {
+        didSet {
+            travelButton.isHidden = cellType == .favourites
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +33,5 @@ final class StationsTableViewCell: UITableViewCell {
         contentView.backgroundColor = .clear
         containerView.layer.cornerRadius = 8
     }
+    
 }
