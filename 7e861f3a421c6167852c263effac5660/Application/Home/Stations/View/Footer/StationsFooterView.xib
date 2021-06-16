@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StationsFooterView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="7uj-bq-B3K"/>
+                <outlet property="currentStationLabel" destination="MfX-ot-du2" id="Ff5-bU-Krx"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

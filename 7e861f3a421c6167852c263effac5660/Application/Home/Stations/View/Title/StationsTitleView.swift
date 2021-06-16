@@ -13,4 +13,9 @@ final class StationsTitleView: BaseXib {
     @IBOutlet weak var eusPointsLabel: UILabel!
     @IBOutlet weak var dsPointsLabel: UILabel!
     
+    func refresh() {
+        ugsPointsLabel.text = String(GameManager.shared.player.ugsPoints)
+        eusPointsLabel.text = String(GameManager.shared.player.eusPoints)
+        dsPointsLabel.text = String(GameManager.shared.player.dsPoints)
+    }
 }

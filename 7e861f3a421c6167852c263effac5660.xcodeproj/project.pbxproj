@@ -13,6 +13,15 @@
 		DC12911826755E45007CB73F /* CreateShipSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC12911726755E45007CB73F /* CreateShipSliderView.xib */; };
 		DC12911B26756988007CB73F /* ColorCompatability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12911A26756988007CB73F /* ColorCompatability.swift */; };
 		DC12911F26756A9D007CB73F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12911E26756A9D007CB73F /* PrimaryButton.swift */; };
+		DC17658D2679197400EC4C3A /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC17658C2679197400EC4C3A /* GameManager.swift */; };
+		DC1765902679198800EC4C3A /* StationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC17658F2679198800EC4C3A /* StationsDataSource.swift */; };
+		DC176593267919F400EC4C3A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC176592267919F400EC4C3A /* Player.swift */; };
+		DC1765972679236000EC4C3A /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1765962679236000EC4C3A /* StationsViewModel.swift */; };
+		DC22F873267A972A00772ECB /* UserDefault+Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22F872267A972A00772ECB /* UserDefault+Player.swift */; };
+		DC22F876267A974900772ECB /* UserDefaults+Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22F875267A974900772ECB /* UserDefaults+Stations.swift */; };
+		DC22F87A267A97B600772ECB /* Comparable+Clamped.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22F879267A97B600772ECB /* Comparable+Clamped.swift */; };
+		DC22F87D267A97CB00772ECB /* CGPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22F87C267A97CB00772ECB /* CGPoint+Distance.swift */; };
+		DC22F884267A984000772ECB /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC22F883267A984000772ECB /* Station.swift */; };
 		DC25C8E826760169008767F2 /* CreateShipTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8E726760169008767F2 /* CreateShipTitleView.swift */; };
 		DC25C8EB26760FC1008767F2 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8EA26760FC1008767F2 /* UIViewController+Alert.swift */; };
 		DC25C8EE26761226008767F2 /* UIView+TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25C8ED26761226008767F2 /* UIView+TapGesture.swift */; };
@@ -49,6 +58,15 @@
 		DC12911726755E45007CB73F /* CreateShipSliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateShipSliderView.xib; sourceTree = "<group>"; };
 		DC12911A26756988007CB73F /* ColorCompatability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCompatability.swift; sourceTree = "<group>"; };
 		DC12911E26756A9D007CB73F /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		DC17658C2679197400EC4C3A /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		DC17658F2679198800EC4C3A /* StationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDataSource.swift; sourceTree = "<group>"; };
+		DC176592267919F400EC4C3A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		DC1765962679236000EC4C3A /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
+		DC22F872267A972A00772ECB /* UserDefault+Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Player.swift"; sourceTree = "<group>"; };
+		DC22F875267A974900772ECB /* UserDefaults+Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Stations.swift"; sourceTree = "<group>"; };
+		DC22F879267A97B600772ECB /* Comparable+Clamped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Clamped.swift"; sourceTree = "<group>"; };
+		DC22F87C267A97CB00772ECB /* CGPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Distance.swift"; sourceTree = "<group>"; };
+		DC22F883267A984000772ECB /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		DC25C8E726760169008767F2 /* CreateShipTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShipTitleView.swift; sourceTree = "<group>"; };
 		DC25C8EA26760FC1008767F2 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		DC25C8ED26761226008767F2 /* UIView+TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGesture.swift"; sourceTree = "<group>"; };
@@ -155,6 +173,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DC1765952679235900EC4C3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC1765962679236000EC4C3A /* StationsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC22F871267A971A00772ECB /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				DC22F872267A972A00772ECB /* UserDefault+Player.swift */,
+				DC22F875267A974900772ECB /* UserDefaults+Stations.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		DC707AF926762A8C00C1AF8B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +259,7 @@
 		DC98E60626752835005F116F /* Stations */ = {
 			isa = PBXGroup;
 			children = (
+				DC1765952679235900EC4C3A /* ViewModel */,
 				DC0E1BF126761AAF00850A57 /* Controller */,
 				DC0E1BE8267618C900850A57 /* View */,
 			);
@@ -263,6 +299,8 @@
 				DC12911D26756A8E007CB73F /* UIComponents */,
 				DC98E61A267552CD005F116F /* Extensions */,
 				DC12911A26756988007CB73F /* ColorCompatability.swift */,
+				DC176592267919F400EC4C3A /* Player.swift */,
+				DC22F883267A984000772ECB /* Station.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -270,10 +308,13 @@
 		DC98E61A267552CD005F116F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC22F871267A971A00772ECB /* UserDefaults */,
 				DC98E61B267553BB005F116F /* UIView+Constraints.swift */,
 				DC25C8EA26760FC1008767F2 /* UIViewController+Alert.swift */,
 				DC25C8ED26761226008767F2 /* UIView+TapGesture.swift */,
 				DCB62DB22677671300708267 /* UIWindow+First.swift */,
+				DC22F879267A97B600772ECB /* Comparable+Clamped.swift */,
+				DC22F87C267A97CB00772ECB /* CGPoint+Distance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				DCB62DAE2677661900708267 /* ActivityIndicatorManager.swift */,
+				DC17658C2679197400EC4C3A /* GameManager.swift */,
+				DC17658F2679198800EC4C3A /* StationsDataSource.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -402,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC98E6182675523C005F116F /* BaseXib.swift in Sources */,
+				DC17658D2679197400EC4C3A /* GameManager.swift in Sources */,
 				DC12911F26756A9D007CB73F /* PrimaryButton.swift in Sources */,
 				DC707B10267666A300C1AF8B /* StationsTableViewCell.swift in Sources */,
 				DC12911526755E26007CB73F /* CreateShipSliderView.swift in Sources */,
@@ -410,17 +454,25 @@
 				DC0E1BEB267618E900850A57 /* StationsTitleView.swift in Sources */,
 				DC98E600267522A6005F116F /* CreateShipViewController.swift in Sources */,
 				DC707B0C267665E800C1AF8B /* StationsFooterView.swift in Sources */,
+				DC22F884267A984000772ECB /* Station.swift in Sources */,
 				DC25C8F126761275008767F2 /* BaseViewController.swift in Sources */,
 				DCB8DF9C2675140900571AA7 /* AppDelegate.swift in Sources */,
+				DC22F87D267A97CB00772ECB /* CGPoint+Distance.swift in Sources */,
+				DC1765972679236000EC4C3A /* StationsViewModel.swift in Sources */,
 				DC98E6042675282F005F116F /* HomeTabBarController.swift in Sources */,
+				DC1765902679198800EC4C3A /* StationsDataSource.swift in Sources */,
 				DCB62DB32677671300708267 /* UIWindow+First.swift in Sources */,
 				DC98E60D267528C2005F116F /* FavouritesViewController.swift in Sources */,
+				DC22F873267A972A00772ECB /* UserDefault+Player.swift in Sources */,
 				DC25C8EE26761226008767F2 /* UIView+TapGesture.swift in Sources */,
 				DCB62DAF2677661900708267 /* ActivityIndicatorManager.swift in Sources */,
+				DC176593267919F400EC4C3A /* Player.swift in Sources */,
+				DC22F876267A974900772ECB /* UserDefaults+Stations.swift in Sources */,
 				DC875C2B267575A3001C1FC5 /* CreateShipViewModel.swift in Sources */,
 				DCB62DAB26775F8900708267 /* GetStationsService.swift in Sources */,
 				DC98E6092675286F005F116F /* StationsViewController.swift in Sources */,
 				DC707B012676653700C1AF8B /* StationsHeaderView.swift in Sources */,
+				DC22F87A267A97B600772ECB /* Comparable+Clamped.swift in Sources */,
 				DC25C8E826760169008767F2 /* CreateShipTitleView.swift in Sources */,
 				DC12911B26756988007CB73F /* ColorCompatability.swift in Sources */,
 				DC98E61C267553BB005F116F /* UIView+Constraints.swift in Sources */,

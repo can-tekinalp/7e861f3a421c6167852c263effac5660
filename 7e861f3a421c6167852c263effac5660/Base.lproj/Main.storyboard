@@ -52,8 +52,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-cf-AAK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Evb-bk-cog" customClass="StationsHeaderView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="clt-tV-gNg" customClass="StationsFooterView" customModule="_e861f3a421c6167852c263effac5660" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="587" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="50" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-cf-AAK">
+                                <rect key="frame" x="0.0" y="144" width="414" height="443"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <sections/>
                                 <connections>
@@ -65,20 +73,28 @@
                         <viewLayoutGuide key="safeArea" id="Zr9-gm-hAL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UcC-cf-AAK" firstAttribute="top" secondItem="Zr9-gm-hAL" secondAttribute="top" id="6uh-02-Ez3"/>
-                            <constraint firstItem="Zr9-gm-hAL" firstAttribute="bottom" secondItem="UcC-cf-AAK" secondAttribute="bottom" id="8Aq-Qj-ey1"/>
+                            <constraint firstItem="clt-tV-gNg" firstAttribute="top" secondItem="UcC-cf-AAK" secondAttribute="bottom" id="DdK-TT-3gF"/>
+                            <constraint firstItem="Evb-bk-cog" firstAttribute="leading" secondItem="Zr9-gm-hAL" secondAttribute="leading" id="FVo-Q3-l9s"/>
+                            <constraint firstItem="Zr9-gm-hAL" firstAttribute="trailing" secondItem="clt-tV-gNg" secondAttribute="trailing" id="P9f-Fp-cRU"/>
+                            <constraint firstItem="Zr9-gm-hAL" firstAttribute="bottom" secondItem="clt-tV-gNg" secondAttribute="bottom" id="Rne-or-Cje"/>
+                            <constraint firstItem="clt-tV-gNg" firstAttribute="leading" secondItem="Zr9-gm-hAL" secondAttribute="leading" id="ULV-7c-2m6"/>
                             <constraint firstItem="UcC-cf-AAK" firstAttribute="leading" secondItem="Zr9-gm-hAL" secondAttribute="leading" id="dlx-jh-iPg"/>
+                            <constraint firstItem="Evb-bk-cog" firstAttribute="top" secondItem="Zr9-gm-hAL" secondAttribute="top" id="l1d-De-1q4"/>
                             <constraint firstItem="Zr9-gm-hAL" firstAttribute="trailing" secondItem="UcC-cf-AAK" secondAttribute="trailing" id="ngC-ha-cFl"/>
+                            <constraint firstItem="Zr9-gm-hAL" firstAttribute="trailing" secondItem="Evb-bk-cog" secondAttribute="trailing" id="pMg-44-WSr"/>
+                            <constraint firstItem="UcC-cf-AAK" firstAttribute="top" secondItem="Evb-bk-cog" secondAttribute="bottom" id="qug-DY-wjn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9rz-4D-A06"/>
                     <connections>
+                        <outlet property="footerView" destination="clt-tV-gNg" id="AhN-Zk-sZF"/>
+                        <outlet property="headerView" destination="Evb-bk-cog" id="oad-es-pvf"/>
                         <outlet property="tableView" destination="UcC-cf-AAK" id="WVE-hk-lOx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQl-Se-zjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5313.04347826087" y="644.86607142857144"/>
+            <point key="canvasLocation" x="5313.04347826087" y="644.02173913043487"/>
         </scene>
         <!--Create Ship View Controller-->
         <scene sceneID="b6B-8R-Kn0">

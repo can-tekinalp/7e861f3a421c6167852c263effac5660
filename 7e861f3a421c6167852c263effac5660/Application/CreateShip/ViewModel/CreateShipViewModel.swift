@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias CreateShipResult = Result<Void, String>
+
 final class CreateShipViewModel {
     
     private let totalPoint: Int = 15
@@ -30,8 +32,22 @@ final class CreateShipViewModel {
     lazy var capacitySliderViewModel = CreateShipSliderViewModel(title: "Kapasite", availablePoint: totalPoint)
     
     var availablePointsChanged: (String) -> Void = { _ in }
-    var didSpendAllPoints: Bool {
+    
+    private var didSpendAllPoints: Bool {
         return availablePoint == 0
+    }
+    
+    var result: CreateShipResult {
+        if !didSpendAllPoints {
+            return .failure("Lütfen tüm puanları harcayın.")
+        }
+        
+        if durabilitySliderViewModel.currentPoint == 0 ||
+            speedSliderViewModel.currentPoint == 0 ||
+            capacitySliderViewModel.currentPoint == 0 {
+            return .failure("Özelliklerden herhangi birisi sıfır olamaz.")
+        }
+        return .success(())
     }
     
     init() {

@@ -9,7 +9,13 @@ import UIKit
 
 final class StationsFooterView: BaseXib {
     
+    @IBOutlet weak var currentStationLabel: UILabel!
+    
     override func initialConfiguration() {
         contentView.backgroundColor = ColorCompatibility.systemBackground
+    }
+    
+    func refresh() {
+        currentStationLabel.text = GameManager.shared.currentStation?.name
     }
 }

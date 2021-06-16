@@ -9,9 +9,11 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    private var navigationController: UINavigationController?
+    
     var window: UIWindow?
+    static let shared = UIApplication.shared.delegate as! AppDelegate
+    private var navigationController: UINavigationController?
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupRootController()
@@ -21,10 +23,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupRootController() {
         window = UIWindow(frame: UIScreen.main.bounds)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "CreateShipViewController")
+
+        let hasPlayer = UserDefaults.player != nil
+        var controller: UIViewController
+        if hasPlayer {
+            controller = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController")
+            GameManager.shared.loadFromCache()
+        } else {
+            controller = storyboard.instantiateViewController(withIdentifier: "CreateShipViewController")
+        }
+        
         navigationController = UINavigationController(rootViewController: controller)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func routeToHomePage() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController")
+        self.navigationController?.setViewControllers([controller], animated: true)
     }
 }
 

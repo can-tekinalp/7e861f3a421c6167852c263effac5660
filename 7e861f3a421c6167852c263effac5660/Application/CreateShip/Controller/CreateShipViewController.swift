@@ -45,20 +45,31 @@ final class CreateShipViewController: BaseViewController {
             return
         }
         
-        guard createShipViewModel.didSpendAllPoints else {
-            showOkAlert(title: "Uyarı", message: "Lütfen tüm puanları harcayın.")
+        if case let CreateShipResult.failure(errorMessage) = createShipViewModel.result {
+            showOkAlert(title: "Uyarı", message: errorMessage)
             return
         }
         
         ActivityIndicatorManager.shared.show()
-        GetStationsService.fetchStations { (result) in
+        GetStationsService.fetchStations { [weak self] (result) in
             ActivityIndicatorManager.shared.hide()
             switch result {
             case .success(let stations):
-                debugPrint(stations)
+                self?.startGame(stations: stations)
             case .failure(let error):
-                break
+                self?.showOkAlert(title: "Hata", message: error)
             }
         }
+    }
+    
+    private func startGame(stations: [StationInfo]) {
+        let player = Player(
+            name: self.textField.text!,
+            durability: self.durabilitySliderView.viewModel!.currentPoint,
+            speed: self.speedSliderView.viewModel!.currentPoint,
+            capacity: self.capacitySliderView.viewModel!.currentPoint
+        )
+        GameManager.shared.initGame(player: player, stationModels: stations)
+        AppDelegate.shared.routeToHomePage()
     }
 }

@@ -7,7 +7,9 @@
 
 import Foundation
 
-typealias GetStationsCompletionHandler = (Result<[Station], String>) -> Void
+extension String: Error { }
+
+typealias GetStationsCompletionHandler = (Result<[StationInfo], String>) -> Void
 
 final class GetStationsService {
     
@@ -16,27 +18,28 @@ final class GetStationsService {
     static func fetchStations(handler: @escaping GetStationsCompletionHandler) {
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            if let error = error {
-                handler(.failure(error.localizedDescription))
-                return
-            }
-            
-            if let data = data,
-               let response = response as? HTTPURLResponse,
-               response.statusCode == 200 {
+            DispatchQueue.main.async {
+                if let error = error {
+                    handler(.failure(error.localizedDescription))
+                    return
+                }
                 
-                do {
-                    let stations = try JSONDecoder().decode([Station].self, from: data)
-                    handler(.success(stations))
-                } catch let error {
-                    #if DEBUG
-                    debugPrint(error.localizedDescription)
-                    #endif
+                if let data = data,
+                   let response = response as? HTTPURLResponse,
+                   response.statusCode == 200 {
+                    
+                    do {
+                        let stations = try JSONDecoder().decode([StationInfo].self, from: data)
+                        handler(.success(stations))
+                    } catch let error {
+                        #if DEBUG
+                        debugPrint(error.localizedDescription)
+                        #endif
+                        handler(.failure("Beklenmedik bir hata meydana geldi."))
+                    }
+                } else {
                     handler(.failure("Beklenmedik bir hata meydana geldi."))
                 }
-            } else {
-                handler(.failure("Beklenmedik bir hata meydana geldi."))
             }
         }
         
@@ -44,13 +47,20 @@ final class GetStationsService {
     }
 }
 
-struct Station: Codable {
+final class StationInfo: Codable {
     let name: String
     let coordinateX: Int
     let coordinateY: Int
     let capacity: Int
-    let stock: Int
-    let need: Int
+    var stock: Int
+    var need: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case coordinateX = "coordinateX"
+        case coordinateY = "coordinateY"
+        case capacity = "capacity"
+        case stock = "stock"
+        case need = "need"
+    }
 }
-
-extension String: Error { }
